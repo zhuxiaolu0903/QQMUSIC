@@ -1,0 +1,383 @@
+/**
+ * Reset 0.1.1
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 12px;
+  font-style: normal;
+  font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+}
+small {
+  font-size: 12px;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover,
+a:active {
+  outline-width: 0;
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  border: 0;
+  height: 1px;
+}
+img {
+  border-style: none;
+}
+img:not([src]) {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+html {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+textarea,
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]),
+video:not([controls]) {
+  display: none;
+  height: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+mark {
+  background-color: #ff0;
+  color: #000000;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+textarea {
+  overflow: auto;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+html {
+  font-size: 100px;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.mainBox {
+  position: relative;
+  margin: 0 auto;
+  max-width: 640px;
+  height: 100%;
+  overflow: hidden;
+  /*HEADER*/
+  /*CONTENT*/
+  /*FOOTER*/
+}
+.mainBox .img_bg,
+.mainBox .mark_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.mainBox .img_bg img {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 200%;
+  height: 100%;
+}
+.mainBox .mark_bg {
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.mainBox .headerBox {
+  padding: .3rem;
+  height: 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+.mainBox .headerBox .leftBox {
+  float: left;
+  height: 1.2rem;
+}
+.mainBox .headerBox .leftBox .portrait {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.mainBox .headerBox .leftBox .portrait img {
+  width: 100%;
+  height: 100%;
+}
+.mainBox .headerBox .leftBox .detail {
+  display: inline-block;
+  margin-left: .2rem;
+  height: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  font-weight: normal;
+}
+.mainBox .headerBox .leftBox .detail h2 {
+  margin-top: .3rem;
+  font-size: .24rem;
+}
+.mainBox .headerBox .leftBox .detail h3 {
+  margin-top: .1rem;
+  font-size: .2rem;
+}
+.mainBox .headerBox .rightBox {
+  display: none;
+  float: right;
+  margin-top: .3rem;
+  width: .6rem;
+  height: .6rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: url("../img/music.svg") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .headerBox .rightBox.move {
+  animation: rotate 2s linear infinite both;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mainBox .contentBox {
+  position: relative;
+  margin: .4rem .2rem;
+  width: 100%;
+  /*height: ; 内容区域是不能固定的:一屏幕的高度-HEADER-FOOTER-MARGIN  WRAPPER的高度是内容撑开的，即使比CONTENT高也没有问题，因为已经做了溢出隐藏，后期控制WRAPPER在CONTENT中上下运动即可*/
+  overflow: hidden;
+}
+.mainBox .contentBox .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: .5s;
+  /*当WRAPPER运动的时候可以有平缓的过渡效果*/
+}
+.mainBox .contentBox .wrapper p {
+  line-height: .84rem;
+  font-size: .3rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  letter-spacing: .04rem;
+  /*文字超出一行截取*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mainBox .contentBox .wrapper p.active {
+  font-size: .32rem;
+  color: #31c27c;
+}
+.mainBox .footerBox {
+  margin: 0 .2rem;
+  padding-bottom: .2rem;
+}
+.mainBox .footerBox .progress {
+  position: relative;
+  height: .8rem;
+  overflow: hidden;
+  /*用来解决子元素的margin-top值不起作用*/
+}
+.mainBox .footerBox .progress .progress_bg {
+  position: relative;
+  margin: .38rem auto 0 auto;
+  width: 4.2rem;
+  height: .04rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.mainBox .footerBox .progress .progress_bg .progressing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #31c27c;
+}
+.mainBox .footerBox .progress span {
+  position: absolute;
+  top: 0;
+  width: .9rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.mainBox .footerBox .progress span:nth-of-type(1) {
+  left: 0;
+}
+.mainBox .footerBox .progress span:nth-of-type(2) {
+  right: 0;
+}
+.mainBox .footerBox .nextMusic {
+  margin: 0 auto;
+  width: 4.4rem;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  background: url("../img/sprite_play.png") no-repeat 0.15rem -5.88rem #31c27c;
+  background-size: .8rem 7rem;
+  border-radius: .45rem;
+}
+.mainBox .footerBox .nextMusic .nextLink {
+  font-size: .3rem;
+  letter-spacing: .08rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.mainBox .footerBox .nextMusic:active {
+  background-color: #279962;
+}

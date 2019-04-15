@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+        ~function anonymous(window) {
+            let computedREM = function computedREM() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }(window);
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <div class="img_bg">
+        <!--<img src="img/img1.jpg" alt="">-->
+    </div>
+    <div class="mark_bg"></div> <!--遮罩层-->
+    <header class="headerBox clearfix">
+        <div class="leftBox">
+            <div class="portrait">
+                <!--<img src="img/img1.jpg" alt="">-->
+            </div>
+            <div class="detail">
+                <!--<h2 class="title">陌生人(Live)</h2>-->
+                <!--<h3 class="author">魏潇逸、丁倩倩</h3>-->
+            </div>
+        </div>
+        <div class="rightBox"></div>
+    </header>
+    <section class="contentBox">
+        <div class="wrapper">
+            <!--<p>魏潇逸、丁倩倩 - 陌生人(Live)</p>-->
+        </div>
+    </section>
+    <footer class="footerBox">
+        <div class="progress">
+            <span class="currentTime">00:00</span>
+            <div class="progress_bg">
+                <div class="progressing"></div>
+            </div>
+            <span class="durationTime"></span>
+        </div>
+        <div class="nextMusic">
+            <a href="#" class="nextLink">下一首歌曲</a>
+        </div>
+    </footer>
+    <div class="audioMusic"></div>
+    <!--<audio src="audio/魏潇逸、丁倩倩%20-%20陌生人%20(Live).mp3" preload="none" id="music_1"></audio>-->
+    <!--<audio src="audio/韩红、林俊杰%20-%20飞云之下.mp3" preload="none"  id="music_2"></audio>-->
+    <!--<audio src="audio/白静晨、汪闻婷%20-%20苏州河%20(Live).mp3" preload="none"  id="music_3"></audio>-->
+</main>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+@import "reset.min.less";
+@light_white: rgba(255, 255, 255, 0.5);
+@light_green: #31C27C;
+
+html{
+  font-size: 100px;
+}
+html, body{
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainBox{
+  position: relative;
+  margin: 0 auto;
+  max-width: 640px;
+  height: 100%;
+  overflow: hidden;
+  .img_bg, .mark_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .img_bg{
+    img{
+      position: absolute;
+      top: 0;
+      left: -40%;
+      width: 200%;
+      height: 100%;
+      //filter: blur(3px); /*为图片增加的模糊度*/
+    }
+  }
+  .mark_bg{
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  /*HEADER*/
+  .headerBox{
+    padding: .3rem;
+    height: 1.2rem;
+    background: rgba(0, 0, 0, 0.2);
+    .leftBox{
+      float: left;
+      height: 1.2rem;
+      .portrait{
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .detail{
+        display: inline-block;
+        margin-left: .2rem;
+        height: 1.2rem;
+        color: @light_white;
+        overflow: hidden;
+        font-weight: normal;
+        h2{
+          margin-top: .3rem;
+          font-size: .24rem;
+        }
+        h3{
+          margin-top: .1rem;
+          font-size: .2rem;
+        }
+      }
+    }
+    .rightBox{
+      display: none;
+      float: right;
+      margin-top: .3rem;
+      width: .6rem;
+      height: .6rem;
+      color: @light_white;
+      background: url("../img/music.svg") no-repeat;
+      background-size: 100% 100%;
+      &.move{
+        animation: rotate 2s linear infinite both;
+      }
+    }
+    @keyframes rotate{
+      from{
+        transform: rotate(0deg);
+      }to{
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  /*CONTENT*/
+  .contentBox{
+    position: relative;
+    margin: .4rem .2rem;
+    width: 100%;
+    /*height: ; 内容区域是不能固定的:一屏幕的高度-HEADER-FOOTER-MARGIN  WRAPPER的高度是内容撑开的，即使比CONTENT高也没有问题，因为已经做了溢出隐藏，后期控制WRAPPER在CONTENT中上下运动即可*/
+    overflow: hidden;
+    .wrapper{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: .5s; /*当WRAPPER运动的时候可以有平缓的过渡效果*/
+      p{
+        line-height: .84rem;
+        font-size: .3rem;
+        color: @light_white;
+        text-align: center;
+        letter-spacing: .04rem;
+        /*文字超出一行截取*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &.active {
+          font-size: .32rem;
+          color: @light_green;
+        }
+      }
+    }
+  }
+
+
+  /*FOOTER*/
+  .footerBox{
+    margin: 0 .2rem;
+    padding-bottom: .2rem;
+    .progress{
+      position: relative;
+      height: .8rem;
+      overflow: hidden; /*用来解决子元素的margin-top值不起作用*/
+      .progress_bg{
+        position: relative;
+        margin: .38rem auto 0 auto;
+        width: 4.2rem;
+        height: .04rem;
+        background: @light_white;
+        .progressing{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: @light_green;
+        }
+      }
+      span{
+        position: absolute;
+        top: 0;
+        width: .9rem;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        color: @light_white;
+        &:nth-of-type(1){
+          left: 0;
+        }
+        &:nth-of-type(2){
+          right: 0;
+        }
+      }
+    }
+    .nextMusic{
+      margin: 0 auto;
+      width: 4.4rem;
+      height: .9rem;
+      line-height: .9rem;
+      text-align: center;
+      background: url("../img/sprite_play.png") no-repeat .15rem -5.88rem @light_green;
+      background-size:  .8rem 7rem;
+      border-radius: .45rem;
+      .nextLink{
+        font-size: .3rem;
+        letter-spacing: .08rem;
+        color: @light_white;
+      }
+      &:active{
+        background-color: darken(@light_green, 10%);
+      }
+    }
+  }
+}
